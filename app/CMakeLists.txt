@@ -3,4 +3,6 @@ message(STATUS "Setting up project for app ${APP_PROJECT_NAME}")
 
 add_executable(${APP_PROJECT_NAME} main.cpp)
 
-target_link_libraries(${APP_PROJECT_NAME} PRIVATE gfxlib_opengl_window)
+target_link_libraries(${APP_PROJECT_NAME}
+        PRIVATE gfxlib_opengl_window
+        PRIVATE Particles)

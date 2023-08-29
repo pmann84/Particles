@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 
 # Project settings
 project(
-        CMakeAppTemplate
+        ParticlesCpp
         VERSION 1.0.0
         DESCRIPTION ""
         LANGUAGES CXX C
@@ -10,14 +10,14 @@ project(
 
 # Set project options
 # Setup a test project with gtest dependencies
-option(BUILD_TESTS "Build the tests" ON)
-#set(GFXLIB_BACKEND "blarg")
+option(BUILD_TESTS "Build the tests" OFF)
 
 # CMake scripts
 include(cmake/project_defaults.cmake) # Default project settings
 include(cmake/project_dependencies.cmake) # Project dependencies
 
 # App framework and app stub
+add_subdirectory(Particles)
 add_subdirectory(app)
 
 # Optionally add tests if they are requested
